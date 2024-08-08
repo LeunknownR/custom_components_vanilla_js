@@ -1,0 +1,15 @@
+* {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.paragraph {
+	margin: 0;
+}
+
+main {
+	margin-top: 15vh;
+	margin-left: 10vw;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}

@@ -1,11 +1,8 @@
-* {
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.custom-tooltip {
+.tooltip {
 	width: max-content;
 	--margin: 6px;
 	position: relative;
-	.custom-tooltip-label {
+	.tooltip-label {
 		background-color: #252525;
 		width: max-content;
 		max-width: 200px;
@@ -17,49 +14,45 @@
 		z-index: 2;
 	}
 	&, &[data-position="bottom"], &[data-position="top"] {
-		.custom-tooltip-label {
+		.tooltip-label {
 			left: 0;
 			right: unset;
 		}
 	}
 	&[data-position="left"], &[data-position="right"] {
-		.custom-tooltip-label {
+		.tooltip-label {
 			top: 50%;
 			translate: 0 -50%;
 			bottom: unset;
 		}
 	}
 	&, &[data-position="bottom"] {
-		.custom-tooltip-label {
+		.tooltip-label {
 			top: calc(100% + var(--margin));
 			bottom: unset;
 		}
 	}
-	&[data-position="top"] .custom-tooltip-label {
+	&[data-position="top"] .tooltip-label {
 		top: unset;
 		bottom: calc(100% + var(--margin));
 	}
-	&[data-position="left"] .custom-tooltip-label {
+	&[data-position="left"] .tooltip-label {
 		right: calc(100% + var(--margin));
 		left: unset;
 	}
-	&[data-position="right"] .custom-tooltip-label {
+	&[data-position="right"] .tooltip-label {
 		right: unset;
 		left: calc(100% + var(--margin));
 	}
-	.custom-tooltip-anchor:not(:hover) ~ .custom-tooltip-label {
+	.tooltip-anchor:not(:hover) ~ .tooltip-label {
 		visibility: hidden;
 		opacity: 0;
 	}
 }
 
-.paragraph {
-	margin: 0;
-}
-
 main {
-	margin-top: 30vh;
-	margin-left: 30vw;
+	margin-top: 20vh;
+	margin-left: 25vw;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
