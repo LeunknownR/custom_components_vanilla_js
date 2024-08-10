@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../global.css">
+	<link rel="stylesheet" href="./index.css">
+	<title>Modal</title>
+</head>
+<body>
+	<a href="/"> < Índice</a>
+	<div>
+		<button class="button-xd modal-toggle-button" data-modal-id="remove-confirmation">
+			Abrir
+		</button>
+		<button class="button-xd modal-toggle-button" data-modal-id="remove-confirmation">
+			Abrir
+		</button>
+		<button class="button-xd modal-toggle-button" data-modal-id="removing-successfully">
+			Abrir
+		</button>
+	</div>
+	<div class="modal" data-modal-id="remove-confirmation">
+		<section class="modal-window">
+			<button class="modal-close-button" type="button">X</button>
+			<h2 class="modal-title">¿Estás seguro de eliminar el registro?</h2>
+			<div class="modal-content">
+				<p class="modal-description">Si eliminas este registro, será permanente.</p>
+				<button class="button-xd modal-toggle-button" data-modal-id="remove-confirmation">
+					Abrir
+				</button>
+			</div>
+			<footer class="modal-footer">
+				<button class="modal-action-button" data-action="close">Cerrar</button>
+				<button class="modal-action-button" data-action="confirm">Eliminar</button>
+			</footer>
+		</section>
+	</div>
+	<div class="modal" data-modal-id="removing-successfully">
+		<section class="modal-window">
+			<button class="modal-close-button" type="button">X</button>
+			<h2 class="modal-title">Registro eliminado existosamente</h2>
+			<div class="modal-content">
+				<p class="modal-description">Espero hayas estado seguro de esta acción :)</p>
+			</div>
+			<footer class="modal-footer">
+				<button type="button" class="modal-action-button" data-action="close">Cerrar</button>
+				<button type="button" class="modal-action-button" data-action="confirm">Eliminar</button>
+			</footer>
+		</section>
+	</div>
+	<script type="module" src="./scripts/index.js"></script>
+</body>
+</html>

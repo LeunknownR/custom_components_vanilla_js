@@ -1,0 +1,108 @@
+body {
+	background: url(/public/img/jotaro-vs-dio.png);
+}
+p {
+	margin: 0;
+}
+
+/* ===Modal=== */
+.modal {
+	--modal-primary-color: #353535;
+	--modal-secondary-color: #9630f5;
+	--modal-soft-secondary-color: #9630f51a;
+	background-color: #000000c4;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	display: grid;
+	place-items: center;
+	transition: 0.25s;
+	&:not(.open) {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+/*.modal-overlay {
+	background-color: #000000c4;
+}*/
+.modal-window {
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	min-width: 500px;
+	position: relative;
+}
+.modal-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--modal-primary-color);
+	margin: 0;
+}
+.modal-content {
+	margin: 20px 0;
+}
+.modal-description {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--modal-primary-color);
+}
+.modal-close-button {
+	border: 0;
+	background-color: transparent;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: var(--modal-primary-color);
+	padding: 6px 8px;
+	border-radius: 5px;
+	transition: 250ms;
+}
+.modal-close-button:hover {
+	background-color: #0002;
+}
+.modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+.modal-action-button {
+	transition: 0.25s;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	padding: 8px 15px;
+	font-size: 15px;
+	cursor: pointer;
+	&, &[data-action="confirm"] {
+		background-color: var(--modal-secondary-color);
+		color: #fff;
+	}
+	&[data-action="close"] {
+		background-color: transparent;
+		color: var(--modal-secondary-color);
+	}
+	&:hover {
+		&[data-action="confirm"] {
+			color: var(--modal-secondary-color);
+			border-color: var(--modal-secondary-color);
+			background-color: transparent;
+		}
+		&[data-action="close"] {
+			background-color: var(--modal-soft-secondary-color);
+			border-color: var(--modal-soft-secondary-color);
+		}
+	}
+}
+/* ========= */
+
+body {
+	padding: 10vh;
+	padding-left: 20vw;
+}
+.button-xd {
+	font-size: 20px;
+}
