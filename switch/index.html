@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../global.css">
+	<link rel="stylesheet" href="./index.css">
+	<title>Switch</title>
+</head>
+<body>
+	<main>
+		<h1>Checkbox no input</h1>
+		<div class="checkbox-no-input" data-checked="false">
+			<span data-role="label">Checkbox no input</span>
+			<div data-role="box"></div>
+		</div>
+		<div class="checkbox-no-input" data-checked="false">
+			<span data-role="label">Checkbox no input 2</span>
+			<div data-role="box"></div>
+		</div>
+
+		<h1>Checkbox custom only CSS</h1>
+		<label class="checkbox-custom-only-css">
+			<span data-role="label">Modo oscuro</span>
+			<div data-role="input">
+				<div data-role="box">
+					<input type="checkbox" hidden/>
+				</div>
+			</div>
+		</label>
+
+		<h1>Switch</h1>
+		<form>
+			<label>
+				<span>Nombres</span>
+				<input name="firstname"/>
+			</label>
+			<label class="switch">
+				<span data-role="label">Modo oscuro</span>
+				<div data-role="input">
+					<div data-role="ball">
+						<input type="checkbox" name="darkMode" hidden/>
+					</div>
+				</div>
+			</label>
+			<label  class="switch">
+				<span data-role="label">Guardar contraseña</span>
+				<div data-role="input">
+					<div data-role="ball">
+						<input type="checkbox" name="savePassword" hidden/>
+					</div>
+				</div>
+			</label>
+			<label class="switch">
+				<span data-role="label">Público</span>
+				<div data-role="input">
+					<div data-role="ball">
+						<input type="checkbox" name="isPublic" hidden/>
+					</div>
+				</div>
+			</label>
+			<button>Obtener datos</button>
+		</form>
+	</main>
+	<script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
