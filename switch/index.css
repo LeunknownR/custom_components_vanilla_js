@@ -31,25 +31,41 @@
 }
 
 .switch {
+	/* Configuración base para los switches */
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	width: max-content;
-	--switch-input-width: 35px;
+	--switch-input-width: calc(35px * var(--switch-input-ratio-size));
 	--switch-input-height: calc(var(--switch-input-width) * 0.5);
-	--switch-input-transition: 0.2s;
+	--switch-input-transition: 0.3s;
 	user-select: none;
+
+	&[data-size="sm"] {
+		--switch-input-ratio-size: 1;
+	}
+
+	&[data-size="md"] {
+		--switch-input-ratio-size: 1.5;
+	}
+
+	&[data-size="lg"] {
+		--switch-input-ratio-size: 2;
+	}
+
 	span[data-role=label] {
 		color: #444;
 	}
+
 	div[data-role=input] {
 		border-radius: 15px;
-		background-color: #e5e5e5;
+		background-color: #27318d;
 		width: var(--switch-input-width);
 		height: var(--switch-input-height);
 		padding: 2px;
 		transition: var(--switch-input-transition);
 	}
+
 	div[data-role=ball] {
 		width: var(--switch-input-height);
 		height: var(--switch-input-height);
@@ -67,6 +83,13 @@
 	}
 	&:not(:has(input:disabled)) {
 		cursor: pointer;
+	}
+	&:has(input:disabled) div[data-role=input] {
+		opacity: 0.5;
+		cursor: not-allowed;
+		div[data-role=ball] {
+			background-color: #bbbbbb;
+		}
 	}
 }
 
